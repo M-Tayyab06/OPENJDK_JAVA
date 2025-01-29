@@ -1,0 +1,59 @@
+# 🍺 OpenJDK Installation Guide
+
+A step-by-step guide to installing **OpenJDK 17/21** on **Ubuntu, CentOS, and macOS**.
+
+![OpenJDK](assets/screenshots/openjdk_banner.png)
+
+## 📌 Table of Contents
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+  - [Ubuntu/Debian](#ubuntu-debian)
+  - [CentOS/RHEL](#centos-rhel)
+  - [macOS](#macos)
+- [Post-Installation](#post-installation)
+- [Troubleshooting](#troubleshooting)
+- [References](#references)
+
+## ✅ Prerequisites
+- 🛠️ **Admin/Sudo Access**
+- 🌐 **Stable Internet Connection**
+- 🖥️ **Terminal Access**
+
+## 🚀 Installation
+
+### 🐧 Ubuntu/Debian
+```bash
+sudo apt update
+sudo apt install openjdk-17-jdk  # or openjdk-21-jdk
+java -version
+```
+
+### 📀 CentOS/RHEL
+```bash
+sudo dnf install java-17-openjdk-devel  # or java-21-openjdk-devel
+java -version
+```
+
+### 🍏 macOS (Homebrew)
+```bash
+brew install openjdk@17  # or openjdk@21
+echo 'export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"' >> ~/.zshrc
+source ~/.zshrc
+java -version
+```
+
+## 🔎 Post-Installation
+Verify Java version:
+```bash
+java -version
+```
+
+## 🛠 Troubleshooting
+- **Java Version Issues?**  
+  Use `update-alternatives --config java` (Linux)
+
+- **Path Issues?**  
+  Add `export PATH="$JAVA_HOME/bin:$PATH"` in `.bashrc` or `.zshrc`
+
+## 📚 References
+- [OpenJDK Official Docs](https://openjdk.org/install/)
